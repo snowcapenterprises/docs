@@ -1,0 +1,1777 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-02-08 Mon 13:13 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>IT Documentation</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Dan Beauchesne" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">IT Documentation</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org7a47633">1. Core Systems</a>
+<ul>
+<li><a href="#orge87fe13">1.1. Termlite</a>
+<ul>
+<li><a href="#org377d150">1.1.1. Overview</a></li>
+<li><a href="#org78c0494">1.1.2. Software</a></li>
+<li><a href="#org193470c">1.1.3. Maintenance and backup</a></li>
+<li><a href="#org9101b48">1.1.4. Key Interactions</a></li>
+</ul>
+</li>
+<li><a href="#org382870a">1.2. Specs</a>
+<ul>
+<li><a href="#orge8a602d">1.2.1. Key Interactions</a></li>
+<li><a href="#org8015388">1.2.2. Backup</a></li>
+</ul>
+</li>
+<li><a href="#org62653f6">1.3. Icicle</a></li>
+<li><a href="#org339eed7">1.4. Active Directory</a>
+<ul>
+<li><a href="#orgb29799c">1.4.1. Overview</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org17dd75f">2. Core Hosts and Hardware</a>
+<ul>
+<li><a href="#org96670c4">2.1. SCO</a>
+<ul>
+<li><a href="#org202066d">2.1.1. Overview</a></li>
+<li><a href="#org151c072">2.1.2. Key Interactions</a></li>
+<li><a href="#org398cc68">2.1.3. Historical Issues</a></li>
+</ul>
+</li>
+<li><a href="#orgc305b3e">2.2. SCO VM Host</a></li>
+<li><a href="#org0518f55">2.3. Qnap</a></li>
+<li><a href="#orgac7f6e4">2.4. DL360-srv</a></li>
+<li><a href="#org590c5e1">2.5. Server</a></li>
+<li><a href="#org2195c0d">2.6. Netgear</a></li>
+</ul>
+</li>
+<li><a href="#org82d3e4c">3. The Network</a>
+<ul>
+<li><a href="#org68364c0">3.1. Topology Basics</a>
+<ul>
+<li><a href="#orgf1c83d5">3.1.1. Core Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgee8bf42">4. Typical User Setups</a>
+<ul>
+<li><a href="#org8c68f22">4.1. Inside Sales User</a></li>
+<li><a href="#orgcabb9d6">4.2. Outside Sales User</a></li>
+<li><a href="#org6e49641">4.3. Remote Sales User</a></li>
+</ul>
+</li>
+<li><a href="#org754e936">5. Core Software</a>
+<ul>
+<li><a href="#org775da6c">5.1. Putty</a>
+<ul>
+<li><a href="#org4ce0b8c">5.1.1. Configuration Specifics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org38bfcbc">6. Printers</a>
+<ul>
+<li><a href="#orgf8b26d9">6.1. Call Center Dot Matrix</a></li>
+<li><a href="#org4b60d5d">6.2. Shipping Office Dot Matrix</a></li>
+<li><a href="#org9c48449">6.3. Upstairs Panasonic Copier</a></li>
+<li><a href="#orga52b7b0">6.4. Upstairs Sharp Copier</a></li>
+<li><a href="#org7072f92">6.5. Upstairs Ricoh Copier</a></li>
+<li><a href="#org48bcafe">6.6. Shipping Office Copier</a></li>
+<li><a href="#org20e5eb3">6.7. Call Center Copier</a></li>
+</ul>
+</li>
+<li><a href="#orgbd4fc81">7. Supplemental systems</a>
+<ul>
+<li><a href="#org31bc84b">7.1. <span class="todo TODO">TODO</span> Netgear</a></li>
+<li><a href="#orga955cf4">7.2. <span class="todo TODO">TODO</span> backupserver</a></li>
+<li><a href="#orgc95108a">7.3. <span class="todo TODO">TODO</span> backup host</a></li>
+</ul>
+</li>
+<li><a href="#orgd1b9cef">8. Recurring Issues and Solutions</a>
+<ul>
+<li><a href="#orgb69c75d">8.1. Record Locks</a></li>
+<li><a href="#orgc15bb83">8.2. Kernel Panic</a></li>
+<li><a href="#org5d69b7f">8.3. SCE Update</a></li>
+<li><a href="#org934b85f">8.4. Samba Version 1 Deprecation in Windows</a></li>
+<li><a href="#orgbdf0281">8.5. <span class="todo TODO">TODO</span> Windows Printer Port Changing</a></li>
+<li><a href="#orge174c46">8.6. TODO</a></li>
+<li><a href="#orgba421be">8.7. TODO</a></li>
+</ul>
+</li>
+<li><a href="#orgdfdfee2">9. Retired Systems</a>
+<ul>
+<li><a href="#org2480f2b">9.1. <span class="todo TODO">TODO</span> Product Book</a></li>
+<li><a href="#org152ff25">9.2. TODO</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>
+This is an incomplete work in progress, intended as a guide to introduce a junior IT person to the Snow Cap network and systems.
+</p>
+
+<p>
+Command prompts are indicated by a hash, the command to be entered follows this:
+</p>
+
+<pre class="example">
+# command
+</pre>
+
+
+<p>
+&ldquo;node&rdquo; will be defined as a network device, anything with an IP address: a workstation, a copier, a label printer, etc.
+</p>
+
+<div id="outline-container-org7a47633" class="outline-2">
+<h2 id="org7a47633"><span class="section-number-2">1</span> Core Systems</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orge87fe13" class="outline-3">
+<h3 id="orge87fe13"><span class="section-number-3">1.1</span> Termlite</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Termlite is the common name for our pseduo-ERP software and database. The software itself is a custom solution written in PROGRESS, a terminal application framework and database language. Since the previous database software was called Termlite, when Snow Cap moved to PROGRESS, <b><b>users maintained &ldquo;Termlite&rdquo; as the reference name</b></b>. Users may sometimes also refer to it as &ldquo;Putty&rdquo;, since that is the emulator we use to connect to Termlite. The PROGRESS ERP system will henceforth be referred to as Termlite
+</p>
+</div>
+
+<div id="outline-container-org377d150" class="outline-4">
+<h4 id="org377d150"><span class="section-number-4">1.1.1</span> Overview</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+Termlite handles our warehouse inventory, accounts receivable (AR), accounts payable (AP), truck routing, purchasing, and other tasks. Its limitations as a modern ERP system are apparent with lack of lot control and shipping features. However, these functions are being handled with cloud based solution called &ldquo;Icicle&rdquo; that is intended to work in tandem with Termlite and is currently a work in progress. See<a href="#orgc873972"> Icicle</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org78c0494" class="outline-4">
+<h4 id="org78c0494"><span class="section-number-4">1.1.2</span> Software</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<p>
+Version
+</p>
+<pre class="example">
+7
+</pre>
+
+<p>
+Host OS
+</p>
+<pre class="example">
+SCO Unix 5.0.2
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org193470c" class="outline-4">
+<h4 id="org193470c"><span class="section-number-4">1.1.3</span> Maintenance and backup</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<p>
+All of the database maintenance, user management, feature updates, and recovery are the responsibility of Clark, who does bi-monthly shifts (usually remotely).
+</p>
+
+<p>
+Backups are done by raw database file copies through two main systems:
+</p>
+<ul class="org-ul">
+<li>Sent to the &ldquo;clone&rdquo; virtual machine backupserver(<a href="#org38b5d54">7.2</a>) running on our backup host scobby(<a href="#org231d750">7.3</a>)</li>
+<li>Pulled from a Netgear(<a href="#orgcec4ba2">7.1</a>) device using rsync</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org9101b48" class="outline-4">
+<h4 id="org9101b48"><span class="section-number-4">1.1.4</span> Key Interactions</h4>
+<div class="outline-text-4" id="text-1-1-4">
+<p>
+Because Clark manages the PROGRESS database, it&rsquo;s users, and the software features itself, the responsibilities of the IT administrator fall outside of it, in dealing with the host operating system SCO(<a href="#org3012ddc">2.1</a>) and&#x2013; since SCO is a virtual machine&#x2013; its&rsquo; VM host(<a href="#org609e472">2.2</a>).
+</p>
+
+<p>
+To summarize:
+</p>
+<pre class="example">
+Termlite(Database software) -&gt; Runs on SCO Unix -&gt; Within a VM on SnowcapVM
+</pre>
+
+
+<p>
+That said, there are often scenarios where a user&rsquo;s database connection is broken, but the database record remains locked. See more about killing users in SCO(<a href="#org0d19b13">2.1.2.1</a>)
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="orgaf3aa72"></a><a id="org2825e5a"></a> Exiting Termlite<br />
+<div class="outline-text-5" id="text-1-1-4-1">
+<p>
+From any menu within Termlite, (repeatedly) push
+</p>
+
+<pre class="example">
+F4
+</pre>
+
+
+<p>
+To get to the Welcome screen, then push
+</p>
+
+<pre class="example">
+4
+</pre>
+
+
+<p>
+To exit the Live connection, and finally
+</p>
+
+<pre class="example">
+X
+</pre>
+
+
+<p>
+To exit Termlite completely.
+</p>
+</div>
+</li>
+
+<li><a id="orgf5ee313"></a><span class="todo TODO">TODO</span> Exporting the Product List<br /></li>
+
+<li><a id="org21920e9"></a><a id="org9b43cb6"></a> SCE Files<br />
+<div class="outline-text-5" id="text-1-1-4-3">
+<p>
+The &ldquo;SCE&rdquo; is the common name for an automatically generated batch of files that is for distribution to the Outside Sales team. Each batch is added to a .zip file for each sales territory, or &ldquo;zone&rdquo;. Although the generation of the files is automatic, the function itself must be triggered within Termlite by a user (usually Nicole or Dave). Then, the .zip files must be distributed daily to each user via email where they do the update process themselves. Currently the files are mailed via a cron-started BASH script on the freenas server.
+</p>
+
+<p>
+Even if the files are generated, if for whatever reason the mailer script does not run, users will complain that &ldquo;They didn&rsquo;t get an update&rdquo;. The first step is parse whether they mean: they didn&rsquo;t receive the email at all, or they received the email but the files are outdated (meaning the file generation function didn&rsquo;t run).
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org382870a" class="outline-3">
+<h3 id="org382870a"><span class="section-number-3">1.2</span> Specs</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+&ldquo;Specs&rdquo; is the common name for the entirety of all product specifications collected from vendors. It is composed and maintained largely by the Quality Assurance team, but used by virtually everyone in the company except for drivers and warehouse personnel.
+</p>
+
+<p>
+It is composed of a file directory structure delineated by <i>product code</i> housed on the <a href="#org15909de">Qnap NAS</a>. Each product folder holds the specification files for that product, which can include ingredient lists, allergen lists, letters of guarantee, audit certificates and much more.
+</p>
+
+<p>
+Because the of massive number of hours spent maintaining, processing, and accessing Specs, it is critical to daily operations.
+</p>
+</div>
+
+<div id="outline-container-orge8a602d" class="outline-4">
+<h4 id="orge8a602d"><span class="section-number-4">1.2.1</span> Key Interactions</h4>
+<div class="outline-text-4" id="text-1-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgd0b2f01"></a>User Access<br />
+<div class="outline-text-5" id="text-1-2-1-1">
+<p>
+Every domain joined workstation will have the Specs folder attached as a read-only mounted drive. This is done through a batch file ran at boot deployed by GPO.
+</p>
+
+<p>
+Write access should be limited given the critical nature of Specs. Permissions are modified through changes on the <a href="#org15909de">Qnap</a> UI.
+</p>
+</div>
+</li>
+
+<li><a id="org6b11fa9"></a>Outside Sales Access<br />
+<div class="outline-text-5" id="text-1-2-1-2">
+<p>
+Given the huge number of subdirectories in the Specs directory, this created problems for Outside Sales users who access Specs on their phone (through the Qfile app), as they had to scroll through thousands of product codes to find the one they were looking for.
+</p>
+
+<p>
+As a result, a script was written to create &ldquo;SpecsView&rdquo;, which takes the first letter of each product, and copies each directory into a corresponding A-Z structure instead. This script runs as a cron task on <a href="#org15909de">Qnap</a> daily to copy the updated spec files into this new structure.
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org8015388" class="outline-4">
+<h4 id="org8015388"><span class="section-number-4">1.2.2</span> Backup</h4>
+</div>
+</div>
+
+<div id="outline-container-org62653f6" class="outline-3">
+<h3 id="org62653f6"><span class="section-number-3">1.3</span> <a id="orgc873972"></a> Icicle</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Icicle is the in-progress lot control
+</p>
+
+<div id="org8865e99" class="figure">
+<p><img src="icicle.png" alt="icicle.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org339eed7" class="outline-3">
+<h3 id="org339eed7"><span class="section-number-3">1.4</span> <a id="org8b82edb"></a> Active Directory</h3>
+<div class="outline-text-3" id="text-1-4">
+</div>
+<div id="outline-container-orgb29799c" class="outline-4">
+<h4 id="orgb29799c"><span class="section-number-4">1.4.1</span> Overview</h4>
+<div class="outline-text-4" id="text-1-4-1">
+<p>
+We use Active Directory for user logins, domain-joined workstations, and printer management. We do not use AD for remote user devices including <a href="#org0da59c1">outside sales laptops and phones</a>, and remote inside sales laptops.
+</p>
+
+<p>
+WSUS and roaming profiles were used in the past, but they were used minimally so disabled. Windows updates are downloaded per client now.
+</p>
+
+<p>
+<a href="#org6ff318f">DL360-srv</a> is the principal DC, with SNOWDC0 serving as the backup.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org17dd75f" class="outline-2">
+<h2 id="org17dd75f"><span class="section-number-2">2</span> Core Hosts and Hardware</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org96670c4" class="outline-3">
+<h3 id="org96670c4"><span class="section-number-3">2.1</span> <a id="org3012ddc"></a> SCO</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org202066d" class="outline-4">
+<h4 id="org202066d"><span class="section-number-4">2.1.1</span> Overview</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<p>
+The operating system hosting Termlite (PROGRESS).
+</p>
+
+<pre class="example">
+SCO Unix version 5.0.6
+</pre>
+
+
+<p>
+It has been modified by Gary at AMS to no longer require a licence (as the vendor is defunct) (see <a href="#org05b857d">2.1.3.1</a>) and to use backported Linux tools through the Skunkware distribution.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org151c072" class="outline-4">
+<h4 id="org151c072"><span class="section-number-4">2.1.2</span> Key Interactions</h4>
+<div class="outline-text-4" id="text-2-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org23c8e80"></a><a id="org0d19b13"></a> Killing Users<br />
+<div class="outline-text-5" id="text-2-1-2-1">
+<p>
+In order to kill a user, use the unix <b><b>last</b></b> command and pipe the results to <b><b>grep</b></b> filtering out users who match &ldquo;logged in&rdquo;. For example:
+</p>
+
+<pre class="example">
+# last | grep logged
+</pre>
+
+
+<p>
+Example output:
+</p>
+
+<pre class="example">
+root      yp55    ttyp55  10842   Thu Jan 5   14:22   00:49   logged in
+dave      yp51    ttyp50  11821   Thu Jan 5   14:10   00:55   logged in
+helen     yp49    ttyp26  20773   Thu Jan 5   12:22   00:59   logged in
+lou       p53     ttyp39  21004   Thu Jan 5   12:13   01:04   logged in
+</pre>
+
+
+<p>
+The fourth column is the user&rsquo;s process ID. There may be more than one PID per user, in which case you may have to ask them to log out of their (new) Termlite sessions to isolate the one that is locking a record.
+</p>
+
+<p>
+Finally, to kill the user, use <b><b>kill</b></b> and pass SIGKILL:
+</p>
+
+<pre class="example">
+# kill -9 11821
+</pre>
+</div>
+</li>
+
+<li><a id="org3125b11"></a><a id="org26a8e85"></a> Restarting SCO<br />
+<div class="outline-text-5" id="text-2-1-2-2">
+<p>
+Restarting SCO is done through VMWare on the <a href="#org609e472">host machine</a>. Before doing so it is critical to notify users:
+</p>
+
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Send an email saying that the system will go down in fifteen minutes</li>
+<li class="off"><code>[&#xa0;]</code> Five minutes later, send a phone ALLPAGE saying that the system will go down</li>
+<li class="off"><code>[&#xa0;]</code> Call Helen directly to ensure she is not in the middle of a &ldquo;check run&rdquo;. Restarting during this process can cause her a huge amount of work</li>
+<li class="off"><code>[&#xa0;]</code> Be mindful of remote users who will not have heard the allpage, and may have not seen the email, call them directly if necessary</li>
+</ul>
+
+<p>
+At this point it is safe to restart the system. This process can only be completed at the VM Console on the <a href="#org609e472">host machine</a> as there is a prompt to continue both after TCP/IP services are stopped, and during boot before TCP/IP services have started again. Therefore, a directly connected keyboard is required.
+</p>
+
+<p>
+That said, it is possible to xrdp into the host machine and control the SCO VM from there.
+</p>
+
+<p>
+Type the following command to restart the system:
+</p>
+
+<pre class="example">
+# shutdown -g0
+</pre>
+
+
+<p>
+At this point SCO will prompt to continue the shutdown, the VM will restart, and hopefully boot. Since moving to a virtual machine, there are times where the SCO system immediately gives a kernel panic when trying to boot (see <a href="#org151c16c">kernel panic</a>).
+</p>
+</div>
+</li>
+
+<li><a id="org98b4236"></a><a id="org7384530"></a> Shared Drives<br />
+<div class="outline-text-5" id="text-2-1-2-3">
+<p>
+There are a series of shared drives on the SCO system, most of them are dedicated to receiving a specific file generated by a user within Termlite. For instance, if a user generates a sales report, Termlite writes those files to a shared folder on SCO. In order to access the file, the user must have that folder mounted in their Windows machine. Since Windows 10, Microsoft has forefully deprecated Samba 1, which is the highest version our SCO system will support. See more <a href="#org473c008">here</a>
+</p>
+
+
+
+<div id="orgde446d7" class="figure">
+<p><img src="foo.png" alt="foo.png" />
+</p>
+</div>
+
+<p>
+An incomplete list of the mountable shares:
+</p>
+
+<pre class="example">
+\\172.16.11.1\export
+\\172.16.11.1\export\icicle
+\\172.16.11.1\download
+\\172.16.11.1\eft
+</pre>
+</div>
+
+<ol class="org-ol">
+<li><a id="org3811796"></a><a id="org6973f65"></a> \\172.16.11.1\export<br />
+<div class="outline-text-6" id="text-2-1-2-3-1">
+<p>
+This is a more general purpose share that receives generated reports of all kinds. Velocity reports, quotes, sales reports, and so on.
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="org214ec4c"></a>Quotes<br />
+<div class="outline-text-7" id="text-2-1-2-3-1-1">
+<p>
+Inside sales staff will need to be able to generate quotes from within Termlite and access them. See <a href="#orga04073a">inside sales user setup</a>
+</p>
+</div>
+</li>
+</ol>
+</li>
+
+<li><a id="org6090207"></a><a id="org0886c7c"></a> \\172.16.11.1\download<br />
+<div class="outline-text-6" id="text-2-1-2-3-2">
+<p>
+This share is mostly used for receiving the automatically generated <a href="#org9b43cb6">SCE Files</a> to be distributed to Outside Sales members. See <a href="#org0da59c1">outside sales user setup</a>
+</p>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-org398cc68" class="outline-4">
+<h4 id="org398cc68"><span class="section-number-4">2.1.3</span> Historical Issues</h4>
+<div class="outline-text-4" id="text-2-1-3">
+</div>
+<ol class="org-ol">
+<li><a id="org2805e18"></a><a id="org05b857d"></a> License Expiry<br />
+<div class="outline-text-5" id="text-2-1-3-1">
+<p>
+Before being modified by Gary at AMS, SCO used to display a warning that the license to use the operating system had expired and to contact the vendor. Eventually this would lead to the OS disabling the TCP/IP stack entirely. As a result, it was necessary to restart the system often&#x2013; sometimes weekly&#x2013; to circumvent this countermeasure.
+</p>
+
+<p>
+On booting the OS, a warning is still displayed, but it no longer affects the functionality of the system.
+</p>
+</div>
+</li>
+
+<li><a id="org19c2981"></a><span class="todo TODO">TODO</span> Fax Function<br /></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgc305b3e" class="outline-3">
+<h3 id="orgc305b3e"><span class="section-number-3">2.2</span> <a id="org609e472"></a> SCO VM Host</h3>
+<div class="outline-text-3" id="text-2-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 1:</span> SnowcapVM Overview</caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Physical Location</td>
+<td class="org-left">On the server rack in the server room</td>
+</tr>
+
+<tr>
+<td class="org-left">IP Address</td>
+<td class="org-left">172.16.11.34</td>
+</tr>
+
+<tr>
+<td class="org-left">VM Host or Guest</td>
+<td class="org-left">Host</td>
+</tr>
+
+<tr>
+<td class="org-left">OS</td>
+<td class="org-left">CentOS</td>
+</tr>
+
+<tr>
+<td class="org-left">Notes</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+<p>
+This is the virtual machine host for the SCO virtual machine.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0518f55" class="outline-3">
+<h3 id="org0518f55"><span class="section-number-3">2.3</span> <a id="org15909de"></a> Qnap</h3>
+<div class="outline-text-3" id="text-2-3">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 2:</span> Qnap Overview</caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Physical Location</td>
+<td class="org-left">On the server rack in the server room</td>
+</tr>
+
+<tr>
+<td class="org-left">IP Address</td>
+<td class="org-left">172.16.11.12, 172.16.11.6</td>
+</tr>
+
+<tr>
+<td class="org-left">VM Host or Guest</td>
+<td class="org-left">N/A</td>
+</tr>
+
+<tr>
+<td class="org-left">OS</td>
+<td class="org-left">QnapOS (Linux)</td>
+</tr>
+
+<tr>
+<td class="org-left">Notes</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgac7f6e4" class="outline-3">
+<h3 id="orgac7f6e4"><span class="section-number-3">2.4</span> <a id="org6ff318f"></a> DL360-srv</h3>
+<div class="outline-text-3" id="text-2-4">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 3:</span> DL360-srv overview</caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Physical Location</td>
+<td class="org-left">Server rack in the server room, above snowbby</td>
+</tr>
+
+<tr>
+<td class="org-left">IP Address</td>
+<td class="org-left">172.16.11.176</td>
+</tr>
+
+<tr>
+<td class="org-left">VM Host or Guest</td>
+<td class="org-left">Host</td>
+</tr>
+
+<tr>
+<td class="org-left">OS</td>
+<td class="org-left">Windows Server 2012 R2</td>
+</tr>
+
+<tr>
+<td class="org-left">Notes</td>
+<td class="org-left">Active Directory Domain Controller (principal)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+<div id="outline-container-org590c5e1" class="outline-3">
+<h3 id="org590c5e1"><span class="section-number-3">2.5</span> <a id="org4069141"></a> Server</h3>
+<div class="outline-text-3" id="text-2-5">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 4:</span> Server Overview</caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Physical Location</td>
+<td class="org-left">On the floor in the server room (tower)</td>
+</tr>
+
+<tr>
+<td class="org-left">IP Address</td>
+<td class="org-left">172.16.11.14</td>
+</tr>
+
+<tr>
+<td class="org-left">VM Host or Guest</td>
+<td class="org-left">Host</td>
+</tr>
+
+<tr>
+<td class="org-left">OS</td>
+<td class="org-left">Windows Server 2012 R2</td>
+</tr>
+
+<tr>
+<td class="org-left">Notes</td>
+<td class="org-left">Print server</td>
+</tr>
+</tbody>
+</table>
+<p>
+As this was one of the first general-purpose servers set up at Snow Cap, the confusingly ambiguous name &ldquo;Server&rdquo; was chosen (not by Dan).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2195c0d" class="outline-3">
+<h3 id="org2195c0d"><span class="section-number-3">2.6</span> <a id="org8ea33a9"></a> Netgear</h3>
+</div>
+</div>
+
+<div id="outline-container-org82d3e4c" class="outline-2">
+<h2 id="org82d3e4c"><span class="section-number-2">3</span> <a id="orgb54c851"></a> The Network</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org68364c0" class="outline-3">
+<h3 id="org68364c0"><span class="section-number-3">3.1</span> Topology Basics</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Snow Cap has a simple, (mostly) 2 subnet network whose core is a Juniper 24 port switch and a Palo Alto firewall and router.
+</p>
+
+
+<div id="org82001d4" class="figure">
+<p><img src="top.png" alt="top.png" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf1c83d5" class="outline-4">
+<h4 id="orgf1c83d5"><span class="section-number-4">3.1.1</span> Core Configuration</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<p>
+&ldquo;Core&rdquo; being defined as, most nodes connected to one of two 48-port switches, the switches being connected to their corresponding VLAN, the VLAN being trunked to a subinterface on Palo Alto, where it is ultimately handled by the virtual router. <i>Changing anything in the 24-port Juniper switch or the Palo Alto virtual router are sure to end in catastrophe without the requisite amount of experience.</i>
+</p>
+
+<p>
+There are two main subnets, which approximate to <i>office nodes</i> and <i>warehouse nodes</i> respectively:
+</p>
+
+<pre class="example">
+172.16.11.0/24
+172.16.20.0/24
+</pre>
+
+
+<p>
+DHCP is done through the Palo Alto, DNS through the two Domain Controllers.
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="org6c52a64"></a><b><b>172.16.11.0/24</b></b><br />
+<div class="outline-text-5" id="text-3-1-1-1">
+<p>
+The &ldquo;main&rdquo; subnet. All office workstations will have an IP on this subnet, most copiers and printers, and most servers.
+</p>
+</div>
+</li>
+
+<li><a id="orgf05b485"></a><b><b>172.16.20.0/24</b></b><br />
+<div class="outline-text-5" id="text-3-1-1-2">
+<p>
+The &ldquo;warehouse&rdquo; subnet. Most nodes are connected through the wireless network in the warehouse.
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgee8bf42" class="outline-2">
+<h2 id="orgee8bf42"><span class="section-number-2">4</span> Typical User Setups</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org8c68f22" class="outline-3">
+<h3 id="org8c68f22"><span class="section-number-3">4.1</span> <a id="orga04073a"></a> Inside Sales User</h3>
+</div>
+
+<div id="outline-container-orgcabb9d6" class="outline-3">
+<h3 id="orgcabb9d6"><span class="section-number-3">4.2</span> <a id="org0da59c1"></a> Outside Sales User</h3>
+</div>
+
+<div id="outline-container-org6e49641" class="outline-3">
+<h3 id="org6e49641"><span class="section-number-3">4.3</span> <a id="orgd63bfe5"></a> Remote Sales User</h3>
+</div>
+</div>
+
+<div id="outline-container-org754e936" class="outline-2">
+<h2 id="org754e936"><span class="section-number-2">5</span> Core Software</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org775da6c" class="outline-3">
+<h3 id="org775da6c"><span class="section-number-3">5.1</span> Putty</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+We use Putty as the terminal emulator of choice for Windows.
+</p>
+</div>
+
+<div id="outline-container-org4ce0b8c" class="outline-4">
+<h4 id="org4ce0b8c"><span class="section-number-4">5.1.1</span> <a id="org3d4a2c1"></a> Configuration Specifics</h4>
+<div class="outline-text-4" id="text-5-1-1">
+<p>
+The following Putty settings are critical to set before using termlite. Neglecting to use them will, at worst, cause the terminal will be unusable or difficult to read, and at worst can disrupt the connection, sometimes causing it to close unexpectedly (the &ldquo;Disable remote-controlled terminal resizing&rdquo; setting in particular).
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 5:</span> Putty settings for connecting to Termlite</caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Category</th>
+<th scope="col" class="org-left">Setting</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Keyboard-&gt;Backspace Key</td>
+<td class="org-left">Control-H</td>
+</tr>
+
+<tr>
+<td class="org-left">Keyboard-&gt;The Function keys and keypad</td>
+<td class="org-left">SCO</td>
+</tr>
+
+<tr>
+<td class="org-left">Features-&gt;Disable remote-controlled terminal resizing</td>
+<td class="org-left">Enable</td>
+</tr>
+
+<tr>
+<td class="org-left">Window-&gt;When window is resized</td>
+<td class="org-left">Change the size of the font</td>
+</tr>
+
+<tr>
+<td class="org-left">Appearance-&gt;Font</td>
+<td class="org-left">(any fixed-width font)</td>
+</tr>
+
+<tr>
+<td class="org-left">Translation-&gt;Remote character set</td>
+<td class="org-left">CP437</td>
+</tr>
+
+<tr>
+<td class="org-left">Translation-&gt;Handling of line drawing characters</td>
+<td class="org-left">Poor man&rsquo;s line drawing</td>
+</tr>
+
+<tr>
+<td class="org-left">Connection-&gt;Seconds between keepalives</td>
+<td class="org-left">15</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org38bfcbc" class="outline-2">
+<h2 id="org38bfcbc"><span class="section-number-2">6</span> Printers</h2>
+<div class="outline-text-2" id="text-6">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 6:</span> Dot Matrix Printer IP Mapping</caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Printer</th>
+<th scope="col" class="org-left">Address</th>
+<th scope="col" class="org-left">Login</th>
+<th scope="col" class="org-left">Password</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Call Center Dot Matrix</td>
+<td class="org-left">172.16.11.3 (jetdirect)</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Shipping Office Dot Matrix</td>
+<td class="org-left">172.16.11.5 (jetdirect)</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 7:</span> Copier Printer IP Mapping</caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Printer</th>
+<th scope="col" class="org-left">Address</th>
+<th scope="col" class="org-left">Login</th>
+<th scope="col" class="org-left">Password</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><a href="#org2cca079">Call Center Copier</a></td>
+<td class="org-left"><a href="http://172.16.11.55">172.16.11.55</a></td>
+<td class="org-left">admin</td>
+<td class="org-left">(blank)</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="#org5b91d60">Upstairs Ricoh Copier</a></td>
+<td class="org-left"><a href="http://172.16.11.132">172.16.11.132</a></td>
+<td class="org-left">admin</td>
+<td class="org-left">(blank)</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="#orgd2ca320">Upstairs Sharp Copier</a></td>
+<td class="org-left"><a href="http://172.16.11.32">172.16.11.32</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="#orge536d6a">Shipping Office Copier</a></td>
+<td class="org-left"><a href="http://172.16.11.37">172.16.11.37</a></td>
+<td class="org-left">admin</td>
+<td class="org-left">(blank)</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="#orgdda004c">Upstairs Panasonic Copier</a></td>
+<td class="org-left"><a href="http://172.16.11.80">172.16.11.80</a></td>
+<td class="org-left">admin</td>
+<td class="org-left">88888888</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 8:</span> Label Printer IP Mapping</caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Printer</th>
+<th scope="col" class="org-left">Address</th>
+<th scope="col" class="org-left">Login</th>
+<th scope="col" class="org-left">Password</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div id="outline-container-orgf8b26d9" class="outline-3">
+<h3 id="orgf8b26d9"><span class="section-number-3">6.1</span> Call Center Dot Matrix</h3>
+<div class="outline-text-3" id="text-6-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Make</td>
+<td class="org-left">Okidata</td>
+</tr>
+
+<tr>
+<td class="org-left">Model</td>
+<td class="org-left">?</td>
+</tr>
+
+<tr>
+<td class="org-left">Connection</td>
+<td class="org-left">Serial&#x2013; networked via JetDirect</td>
+</tr>
+
+<tr>
+<td class="org-left">Toner</td>
+<td class="org-left">Ribbon cartrige, stock handled by Philip</td>
+</tr>
+
+<tr>
+<td class="org-left">Maintenance</td>
+<td class="org-left">Not on a service contract. Needs occasional compressed air cleaning</td>
+</tr>
+
+<tr>
+<td class="org-left">Physical Location</td>
+<td class="org-left">Mail room in the call center</td>
+</tr>
+
+<tr>
+<td class="org-left">Notes</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org4b60d5d" class="outline-3">
+<h3 id="org4b60d5d"><span class="section-number-3">6.2</span> Shipping Office Dot Matrix</h3>
+<div class="outline-text-3" id="text-6-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Make</td>
+<td class="org-left">Okidata</td>
+</tr>
+
+<tr>
+<td class="org-left">Model</td>
+<td class="org-left">?</td>
+</tr>
+
+<tr>
+<td class="org-left">Connection</td>
+<td class="org-left">Serial&#x2013; networked via JetDirect</td>
+</tr>
+
+<tr>
+<td class="org-left">Toner</td>
+<td class="org-left">Ribbon cartrige, stock handled by Philip</td>
+</tr>
+
+<tr>
+<td class="org-left">Maintenance</td>
+<td class="org-left">Not on a service contract. Needs occasional compressed air cleaning</td>
+</tr>
+
+<tr>
+<td class="org-left">Physical Location</td>
+<td class="org-left">Front of the shipping office</td>
+</tr>
+
+<tr>
+<td class="org-left">Notes</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org9c48449" class="outline-3">
+<h3 id="org9c48449"><span class="section-number-3">6.3</span> <a id="orgdda004c"></a> Upstairs Panasonic Copier</h3>
+<div class="outline-text-3" id="text-6-3">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Make</td>
+<td class="org-left">Panasonic</td>
+</tr>
+
+<tr>
+<td class="org-left">Model</td>
+<td class="org-left">dp-8035</td>
+</tr>
+
+<tr>
+<td class="org-left">Connection</td>
+<td class="org-left">Networked via cat5</td>
+</tr>
+
+<tr>
+<td class="org-left">Toner</td>
+<td class="org-left">Order by contacting <a href="https://www.tonertech.com">tonertech</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Maintenance</td>
+<td class="org-left">Not on a service contract. Billable service with <a href="https://royscopier.com">Roy&rsquo;s Copier</a> Service</td>
+</tr>
+
+<tr>
+<td class="org-left">Physical Location</td>
+<td class="org-left">Upstairs beside Mark&rsquo;s office near the window</td>
+</tr>
+
+<tr>
+<td class="org-left">Notes</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orga52b7b0" class="outline-3">
+<h3 id="orga52b7b0"><span class="section-number-3">6.4</span> <a id="orgd2ca320"></a> Upstairs Sharp Copier</h3>
+<div class="outline-text-3" id="text-6-4">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Make</td>
+<td class="org-left">Sharp</td>
+</tr>
+
+<tr>
+<td class="org-left">Model</td>
+<td class="org-left">mx-m503n</td>
+</tr>
+
+<tr>
+<td class="org-left">Connection</td>
+<td class="org-left">Networked via cat5</td>
+</tr>
+
+<tr>
+<td class="org-left">Toner</td>
+<td class="org-left">Order by contacting <a href="https://www.tonertech.com">tonertech</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Maintenance</td>
+<td class="org-left">Not on a service contract. Billable service with <a href="https://royscopier.com">Roy&rsquo;s Copier</a> Service</td>
+</tr>
+
+<tr>
+<td class="org-left">Physical Location</td>
+<td class="org-left">Upstairs before the Innovation Center</td>
+</tr>
+
+<tr>
+<td class="org-left">Notes</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org7072f92" class="outline-3">
+<h3 id="org7072f92"><span class="section-number-3">6.5</span> <a id="org5b91d60"></a> Upstairs Ricoh Copier</h3>
+<div class="outline-text-3" id="text-6-5">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Make</td>
+<td class="org-left">Ricoh</td>
+</tr>
+
+<tr>
+<td class="org-left">Model</td>
+<td class="org-left">c4503</td>
+</tr>
+
+<tr>
+<td class="org-left">Connection</td>
+<td class="org-left">Networked via cat5</td>
+</tr>
+
+<tr>
+<td class="org-left">Toner</td>
+<td class="org-left">Order online through <a href="https://www.myricoh.ca">My Ricoh</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Maintenance</td>
+<td class="org-left">On a service contract with Ricoh</td>
+</tr>
+
+<tr>
+<td class="org-left">Physical Location</td>
+<td class="org-left">Small print room upstairs</td>
+</tr>
+
+<tr>
+<td class="org-left">Notes</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org48bcafe" class="outline-3">
+<h3 id="org48bcafe"><span class="section-number-3">6.6</span> <a id="orge536d6a"></a> Shipping Office Copier</h3>
+<div class="outline-text-3" id="text-6-6">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Make</td>
+<td class="org-left">Ricoh</td>
+</tr>
+
+<tr>
+<td class="org-left">Model</td>
+<td class="org-left">c4504</td>
+</tr>
+
+<tr>
+<td class="org-left">Connection</td>
+<td class="org-left">Networked via cat5</td>
+</tr>
+
+<tr>
+<td class="org-left">Toner</td>
+<td class="org-left">Order online through <a href="https://www.myricoh.ca">My Ricoh</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Maintenance</td>
+<td class="org-left">On a service contract with Ricoh</td>
+</tr>
+
+<tr>
+<td class="org-left">Physical Location</td>
+<td class="org-left">Shipping Office</td>
+</tr>
+
+<tr>
+<td class="org-left">Notes</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org20e5eb3" class="outline-3">
+<h3 id="org20e5eb3"><span class="section-number-3">6.7</span> <a id="org2cca079"></a> Call Center Copier</h3>
+<div class="outline-text-3" id="text-6-7">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Make</td>
+<td class="org-left">Ricoh</td>
+</tr>
+
+<tr>
+<td class="org-left">Model</td>
+<td class="org-left">mp2352</td>
+</tr>
+
+<tr>
+<td class="org-left">Connection</td>
+<td class="org-left">Networked via cat5</td>
+</tr>
+
+<tr>
+<td class="org-left">Toner</td>
+<td class="org-left">Order by contacting <a href="https://royscopier.com">Roy&rsquo;s Copier</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Maintenance</td>
+<td class="org-left">On a service contract with <a href="https://royscopier.com">Roy&rsquo;s Copier</a> Service</td>
+</tr>
+
+<tr>
+<td class="org-left">Physical Location</td>
+<td class="org-left">Mail room in the call center</td>
+</tr>
+
+<tr>
+<td class="org-left">Notes</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbd4fc81" class="outline-2">
+<h2 id="orgbd4fc81"><span class="section-number-2">7</span> Supplemental systems</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-org31bc84b" class="outline-3">
+<h3 id="org31bc84b"><span class="section-number-3">7.1</span> <span class="todo TODO">TODO</span> <a id="orgcec4ba2"></a> Netgear</h3>
+</div>
+
+<div id="outline-container-orga955cf4" class="outline-3">
+<h3 id="orga955cf4"><span class="section-number-3">7.2</span> <span class="todo TODO">TODO</span> <a id="org38b5d54"></a> backupserver</h3>
+</div>
+
+<div id="outline-container-orgc95108a" class="outline-3">
+<h3 id="orgc95108a"><span class="section-number-3">7.3</span> <span class="todo TODO">TODO</span> <a id="org231d750"></a> backup host</h3>
+</div>
+</div>
+
+<div id="outline-container-orgd1b9cef" class="outline-2">
+<h2 id="orgd1b9cef"><span class="section-number-2">8</span> Recurring Issues and Solutions</h2>
+<div class="outline-text-2" id="text-8">
+</div>
+<div id="outline-container-orgb69c75d" class="outline-3">
+<h3 id="orgb69c75d"><span class="section-number-3">8.1</span> Record Locks</h3>
+<div class="outline-text-3" id="text-8-1">
+<p>
+When a user connects to SCO, if that user is intended to use Termlite (which almost all of them are), then their bash profile automatically runs a script to connect to the database. If a user does not gracefully exit the database (see <a href="#org2825e5a">1.1.4.1</a>) for any of the reasons listed below, their user remains attached to the database. This will often create a record lock. This can happen when:
+</p>
+
+<ul class="org-ul">
+<li>A user closes Putty before exiting Termlite</li>
+<li>A network disruption severs the connection between the user and SCO</li>
+<li>Putty is left open for an extended period, and either Putty itself or SCO times out the connection (see more about Putty timeouts <a href="#org3d4a2c1">5.1.1</a>)</li>
+<li>A user&rsquo;s VPN disconnects for whatever reason</li>
+</ul>
+
+<p>
+This lock can prevent the user from re-entering an order, an item, a PO, and so on. This will directly manifest itself in a user calling and saying something like, &ldquo;My termlite closed and I can&rsquo;t get back into an order&rdquo;, or indirectly where a user&rsquo;s background session is record locking other people, causing a cyclical snowballing effect where users start to complain, &ldquo;I&rsquo;m stuck in an order&rdquo;, &ldquo;It just says waiting, what do I do&rdquo;, and so on.
+</p>
+
+<p>
+But in most cases, record locks only affect the user whose termlite did not exit properly, in which case you can kill their SCO sessions (see <a href="#org0d19b13">2.1.2.1</a>). In the event of a cyclical lock described above, it may be easier to simply restart the SCO VM (see <a href="#org26a8e85">2.1.2.2</a>), which will start without any users being locked.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc15bb83" class="outline-3">
+<h3 id="orgc15bb83"><span class="section-number-3">8.2</span> <a id="org151c16c"></a> Kernel Panic</h3>
+<div class="outline-text-3" id="text-8-2">
+<p>
+The SCO system can sometimes kernel panic upon boot (see <a href="#org26a8e85">Restarting SCO</a>). At this point it is important to not simply reboot the virtual machine again from the VirtalBox console (rebooting will usually result in another panic), but to do a full shutdown (turn off the virtual machine) and boot up. So far, this has always resolved the panic.
+</p>
+
+
+<div id="orga37c409" class="figure">
+<p><img src="./panic.png" alt="panic.png" />
+</p>
+<p><span class="figure-number">Figure 4: </span>Kernel Panic Example</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5d69b7f" class="outline-3">
+<h3 id="org5d69b7f"><span class="section-number-3">8.3</span> <a id="org605d0c4"></a> SCE Update</h3>
+<div class="outline-text-3" id="text-8-3">
+<p>
+If the SCE update doesn&rsquo;t get delivered, or an older version gets delivered, a member of the outside sales team may say some variation of:
+</p>
+
+<pre class="example">
+"I didn't get an update"
+"I didn't get my root"
+"My SCE didn't work"
+"Where's my SCE"
+"The SCE isn't updated"
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org934b85f" class="outline-3">
+<h3 id="org934b85f"><span class="section-number-3">8.4</span> <a id="org473c008"></a> Samba Version 1 Deprecation in Windows</h3>
+<div class="outline-text-3" id="text-8-4">
+<p>
+From Windows 10 onward, Microsoft only has SMB1 support in the way of a disabled feature, so we must enable it when setting up a new workstation that intends to access shared drives to retrieve files generated in Termlite.
+</p>
+
+<p>
+I usually do this with Powershell in an elevated window:
+</p>
+
+<pre class="example">
+Enable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
+</pre>
+
+
+<p>
+<b><b>Samba 1 is decades old, and rife with security issues, and an alternative to forefully enabling it would be a better solution.</b></b> Putting SCO/Termlite into a DMZ?
+</p>
+</div>
+</div>
+<div id="outline-container-orgbdf0281" class="outline-3">
+<h3 id="orgbdf0281"><span class="section-number-3">8.5</span> <span class="todo TODO">TODO</span> Windows Printer Port Changing</h3>
+</div>
+
+<div id="outline-container-orge174c46" class="outline-3">
+<h3 id="orge174c46"><span class="section-number-3">8.6</span> TODO</h3>
+</div>
+
+<div id="outline-container-orgba421be" class="outline-3">
+<h3 id="orgba421be"><span class="section-number-3">8.7</span> TODO</h3>
+</div>
+</div>
+
+<div id="outline-container-orgdfdfee2" class="outline-2">
+<h2 id="orgdfdfee2"><span class="section-number-2">9</span> Retired Systems</h2>
+<div class="outline-text-2" id="text-9">
+</div>
+<div id="outline-container-org2480f2b" class="outline-3">
+<h3 id="org2480f2b"><span class="section-number-3">9.1</span> <span class="todo TODO">TODO</span> Product Book</h3>
+</div>
+
+<div id="outline-container-org152ff25" class="outline-3">
+<h3 id="org152ff25"><span class="section-number-3">9.2</span> TODO</h3>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Dan Beauchesne</p>
+<p class="date">Created: 2021-02-08 Mon 13:13</p>
+</div>
+</body>
+</html>

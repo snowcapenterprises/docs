@@ -1,0 +1,18 @@
+#+OPTIONS: org-html-head-include-default-style:nil
+
+#+HTML_HEAD: <style type="text/css">
+#+HTML_HEAD: @import url('https://fonts.googleapis.com/css?family=Inconsolata|Inter&display=swap');
+#+HTML_HEAD: body {
+#+HTML_HEAD: margin: 40px auto;
+#+HTML_HEAD: line-height: 1.6;
+#+HTML_HEAD: font-size: 16px;
+#+HTML_HEAD: color: #444;
+#+HTML_HEAD: padding: 0 10px;
+#+HTML_HEAD: font-family: 'Inter', sans-serif;;
+#+HTML_HEAD: }
+#+HTML_HEAD: h1, h2, h3 {
+#+HTML_HEAD: line-height: 1.2;
+#+HTML_HEAD: font-family: 'Inter', sans-serif;;
+#+HTML_HEAD: }
+#+HTML_HEAD: }
+#+HTML_HEAD: </style>
